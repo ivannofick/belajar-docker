@@ -20,3 +20,5 @@ examp : docker image rm learn-make-img-golang:1.0.0
 examp : docker push learn-make-img-golang:1.0.0 
 12. docker tag "name image":"tag version" "name image on docker hub":"tag version on docker hub" (like a copy image local for copying to docker hub)
 examp : docker tag learn-make-img-golang:1.0.0 ivannofick/learn-make-img-golang:1.0.0
+13. docker run --name "name container" -p 80:80 -d nginx:"tag version" (for run nginx on docker)
+examp : docker run --name servernginx -p 80:80 -d nginx:alpine
