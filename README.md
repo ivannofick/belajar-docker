@@ -1,1 +1,49 @@
-# belajar-docker
+syntax docker
+
+1. install docker
+
+2. docker images (for looked image on docker)
+
+3. docker container ls --all (for looked all container, even started container or stoped container)
+
+4. docker container ls (for looked just started container)
+
+5. docker build --tag "name for repository":"version tag" "location path dockerFile"(for build name repository)
+examp : docker build --tag learn-make-img-golang:1.0.0 /docker-app/image/learn-make-img-golang
+
+6. docker container create --name "name container" -p "port":"port" "name images"(for create container on golang)
+examp : docker container create --name app1 -p 8080:8080 learn-make-img-golang:1.0.0
+
+7. docker container start "name container" (for start container)
+examp : docker container start app1
+
+8. docker stop "id container"(for stop container)
+examp : docker stop er23dasfas34
+
+9. docker rm "id container" (for rm container)
+examp : docker rm er23dasfas34
+
+10. docker image rm "name images":"tag version" (for rm images docker)
+examp : docker image rm learn-make-img-golang:1.0.0 
+
+11. docker push "name images":"tag version" (for push images)
+examp : docker push learn-make-img-golang:1.0.0 
+
+12. docker tag "name image":"tag version" "name image on docker hub":"tag version on docker hub" (like a copy image local for copying to docker hub)
+examp : docker tag learn-make-img-golang:1.0.0 ivannofick/learn-make-img-golang:1.0.0
+
+13. docker run --name "name container" -p 80:80 -d nginx:"tag version" (for run nginx on docker)
+examp : docker run --name servernginx -p 80:80 -d nginx:alpine
+
+14. docker start -ai "container name" (If you want to see the output)
+examp : docker start -ai servernginx
+
+15. docker start container_name(to start container)
+examp : docker start servernginx
+
+16. docker restart container_name(to restart container)
+examp : docker restart servernginx
+
+17. docker exec -it "name container" ls /usr/share/nginx/html (location default path docker for run application)
+examp : docker exec -it nginx-server ls /usr/share/nginx/html
+
