@@ -47,3 +47,6 @@ examp : docker restart servernginx
 17. docker exec -it "name container" ls /usr/share/nginx/html (location default path docker for run application)
 examp : docker exec -it nginx-server ls /usr/share/nginx/html
 
+
+18. docker exec -it <container-id> //bin//sh (open bash container)
+examp : docker exec -it nginx-server //bin//sh
