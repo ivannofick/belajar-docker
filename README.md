@@ -9,7 +9,7 @@ syntax docker
 4. docker container ls (for looked just started container)
 
 5. docker build --tag "name for repository":"version tag" "location path dockerFile"(for build name repository)
-examp : docker build --tag learn-make-img-golang:1.0.0 /docker-app/image/learn-make-img-golang
+   examp : docker build --tag learn-make-img-golang:1.0.0 /docker-app/image/learn-make-img-golang
 
 6. docker container create --name "name container" -p "port":"port" "name images"(for create container on golang)
 examp : docker container create --name app1 -p 8080:8080 learn-make-img-golang:1.0.0
