@@ -56,6 +56,7 @@ examp : docker run --name mysql-server -p 33061:3306 -e MYSQL_ROOT_PASSWORD=123 
 20. docker exec -it "name container mysql" bash (using bash on container mysql)
 examp : docker exec -it mysql-server bash
 
-
+21. docker exec -i "name container" mysql -u"user" -p"pwd" "name db" < "db.sql" (import database mysql)
+examp : docker exec -i mysql-server mysql -uroot -p123 dbrisk_docker < dbrisk_151122.sql
 
 
