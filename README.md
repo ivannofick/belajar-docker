@@ -61,3 +61,9 @@ examp : docker exec -i mysql-server mysql -uroot -p123 dbrisk_docker < dbrisk_15
 
 22. docker run --name redis-server -p "port":"default-port" -d redis:"version" (run redis)
    examp : docker run --name redis-server -p 63791:6379 -d redis:7.0.5
+
+23. docker exec -it "name redis continaer" redis-cli (run redis-cli without run bash)
+   examp : docker exec -it redis-server redis-cli
+   
+24. docker exec -it "name redis continaer" bash (run redis-cli using run bash)
+   examp : docker exec -it redis-server bash
