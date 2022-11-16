@@ -50,7 +50,7 @@ examp : docker exec -it nginx-server ls /usr/share/nginx/html
 18. docker exec -it <container-id> //bin//sh (for use bash on conatiner)
 examp : docker exec -it server-nginx //bin//sh
 
-19. docker run --name "name container" -p "ports" -e MYSQL_ROOT_PASSWORD="pwd" -d mysql:"version"  (runer mysql container docker)
+19. docker run --name "name container" -p "ports":"default-port" -e MYSQL_ROOT_PASSWORD="pwd" -d mysql:"version"  (runer mysql container docker)
 examp : docker run --name mysql-server -p 33061:3306 -e MYSQL_ROOT_PASSWORD=123 -d mysql:8.0.31
 
 20. docker exec -it "name container mysql" bash (using bash on container mysql)
@@ -59,4 +59,5 @@ examp : docker exec -it mysql-server bash
 21. docker exec -i "name container" mysql -u"user" -p"pwd" "name db" < "db.sql" (import database mysql)
 examp : docker exec -i mysql-server mysql -uroot -p123 dbrisk_docker < dbrisk_151122.sql
 
-
+22. docker run --name redis-server -p "port":"default-port" -d redis:"version" (run redis)
+   examp : docker run --name redis-server -p 63791:6379 -d redis:7.0.5
