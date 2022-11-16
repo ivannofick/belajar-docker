@@ -54,7 +54,8 @@ examp : docker exec -it server-nginx //bin//sh
 19. docker run --name "name container" -p "ports" -e MYSQL_ROOT_PASSWORD="pwd" -d mysql:"version"  (runer mysql container docker)
 examp : docker run --name mysql-server -p 33061:3306 -e MYSQL_ROOT_PASSWORD=123 -d mysql:8.0.31
 
-
+20. docker exec -it "name container mysql" bash (using bash on container mysql)
+examp : docker exec -it mysql-server bash
 
 
 
