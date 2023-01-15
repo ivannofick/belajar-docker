@@ -1,3 +1,22 @@
+---------------------------------------------------------------|
+-------------------- Add User Group Docker --------------------|
+1. Create the docker group if it does not exist                |
+$ sudo groupadd docker                                         |
+                                                               |
+2. Add your user to the docker group.                          |
+$ sudo usermod -aG docker $USER                                |
+                                                               |
+3. Log in to the new docker group (to avoid having to          |
+log out / log in again; but if not enough, try to reboot):     |
+$ newgrp docker                                                |
+                                                               |
+4. Check if docker can be run without root                     |
+$ docker run hello-world                                       |
+5. Reboot if still got error                                   |
+$ reboot                                                       |
+                                                               |
+---------------------------------------------------------------|
+
 syntax docker
 
 1. install docker
