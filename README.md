@@ -86,3 +86,8 @@ examp : docker exec -i mysql-server mysql -uroot -p123 dbrisk_docker < dbrisk_15
    
 24. docker exec -it "name redis continaer" bash (run redis-cli using run bash)
    examp : docker exec -it redis-server bash
+
+25. To delete all containers including its volumes use,
+          docker rm -vf $(docker ps -aq)
+26. To delete all the images,
+          docker rmi -f $(docker images -aq)
